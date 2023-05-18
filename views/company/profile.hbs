@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-success">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+<div class="container mb-4">
+    <div class="card img-container" style="padding: 5vh;">
+        {{#if company.completed }}
+        <img class="cover-image" src="/images/company/{{company._id}}.jpg" alt="Image of company" height="400"
+            width="400" style="border-radius: 10px;">
+        {{else}}
+        <img class="cover-image" src="/images/no-user.jpg" alt="Image of company" height="400" width="400"
+            style="border-radius: 10px;">
+        {{/if}}
+    </div>
+    <div class="card" style="max-width: 40vw;">
+        <h1>Your Profile</h1>
+        <label for="formFile" class="form-label">Name : <span class="bold-text"> {{company.name}}</span></label>
+        <label for="formFile" class="form-label">Email : <span class="bold-text"> {{company.email}}</span></label>
+        <label for="formFile" class="form-label">Phone : <span class="bold-text"> {{company.phone_no}}</span></label>
+        <label for="formFile" class="form-label">WORK STATUS : <span class="bold-text">
+                {{company.category}}</span></label>
+
+
+        {{#if company.completed}}
+        <label for="formFile" class="form-label">Address : <span class="bold-text"> {{company.address}}</span></label>
+        <label for="formFile" class="form-label">Bio : <span class="bold-text">
+                {{company.bio}}</span></label>
+        <label for="formFile" class="form-label">Area : <span class="bold-text"> {{company.area}}</span></label>
+        {{/if}}
+        <a href="/company/update-company/{{company._id}}"><button type="submit" class="btn submit-btn">Update
+                Profile</button></a>
+        <p style="margin-top: 2vh;"> Click to <a href="/company">go back</a> </p>
+    </div>
+</div>
+<script src="/javascripts/alert.js"></script>

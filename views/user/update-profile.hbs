@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-success">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+<div class="container">
+    <div class="card">
+        <h1>Update Your Profile</h1>
+        <form action="/update-user/{{id}}" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your Image</label>
+                <input class="form-control" type="file" id="formFile" accept=".jpg" name="image">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your Resume</label>
+                <input class="form-control" type="file" id="formFile" accept=".pdf" name="resume">
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="formFile" class="form-label">Skills</label>
+                    <input type="text" class="form-control" name="skills" id="education" placeholder="Enter your skils"
+                        required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="formFile" class="form-label">Education</label>
+                    <input type="text" class="form-control" name="education" id="education"
+                        placeholder="Enter your Education" required>
+                </div>
+            </div>
+            <button type="submit" class="btn submit-btn">Update Profile</button>
+            <p style="margin-top: 2vh;"> Click to <a href="/">go back</a> </p>
+        </form>
+    </div>
+</div>
+<script src="/javascripts/alert.js"></script>

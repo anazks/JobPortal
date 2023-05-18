@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-success">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+<div class="container">
+    <div class="card mb-4">
+        <h1>Update Profile</h1>
+        <form action="/company/update-company/{{id}}" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Profile Image</label>
+                <input class="form-control" type="file" id="formFile" accept=".jpg" name="image">
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="formFile" class="form-label">Bio</label>
+                    <textarea class="form-control" name="bio" id="education"
+                        placeholder="Enter a short Description about Company" required>{{company.bio}}</textarea>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="formFile" class="form-label">Address</label>
+                    <textarea class="form-control" name="address" id="education" placeholder="Enter Company Address"
+                        required>{{company.address}}</textarea>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="formFile" class="form-label">Area</label>
+                    <input type="text" class="form-control" name="area" id="education" value="{{company.area}}"
+                        placeholder=" Town/City of company" required>
+                </div>
+            </div>
+            <button type="submit" class="btn submit-btn">Update Profile</button>
+            <p style="margin-top: 2vh;"> Click to <a href="/company">go back</a> </p>
+        </form>
+    </div>
+</div>
+<script src="/javascripts/alert.js"></script>

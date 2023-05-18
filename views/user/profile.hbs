@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-success">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+<div class="container">
+    <div class="card img-container" style="padding: 5vh;">
+        {{#if user.completed }}
+        <img class="cover-image" src="/images/users/profile/{{user._id}}.jpg" alt="Image of user" height="400"
+            width="400" style="border-radius: 50%;">
+        {{else}}
+        <img class="cover-image" src="/images/no-user.jpg" alt="Image of user" height="400" width="400"
+            style="border-radius: 50%;">
+        {{/if}}
+    </div>
+    <div class="card">
+        <h1>Your Profile</h1>
+        <label for="formFile" class="form-label">Name : <span class="bold-text"> {{user.name}}</span></label>
+        <label for="formFile" class="form-label">Email : <span class="bold-text"> {{user.email}}</span></label>
+        <label for="formFile" class="form-label">Phone : <span class="bold-text"> {{user.phone_no}}</span></label>
+        <label for="formFile" class="form-label">WORK STATUS : <span class="bold-text">
+                {{user.work_status}}</span></label>
+
+
+        {{#if user.completed}}
+        <label for="formFile" class="form-label">Skills : <span class="bold-text"> {{user.skills}}</span></label>
+        <label for="formFile" class="form-label">Education : <span class="bold-text"> {{user.education}}</span></label>
+        {{/if}}
+        <a href="/update-user/{{user._id}}"><button type="submit" class="btn submit-btn">Update Profile</button></a>
+        <p style="margin-top: 2vh;"> Click to <a href="/">go back</a> </p>
+
+    </div>
+</div>
+<script src="/javascripts/alert.js"></script>

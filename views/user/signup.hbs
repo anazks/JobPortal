@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-primary">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+
+<div class="container">
+    <div class="card img-container" style="padding: 0;">
+        <img class="cover-image" src="/images/signup-cover.jpg" alt="" height="500" width="500">
+    </div>
+    <div class="card">
+        <h1>Find a job & grow your career</h1>
+        <p class="caption-text">Sign Up Now</p>
+        <form action="/signup" method="post">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="name" id="username" placeholder="Enter username"
+                        required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-7">
+                    <input type="password" class="form-control" name="password" id="inputPassword"
+                        placeholder="Enter Password" required>
+                </div>
+                <div class="form-group col-md-5">
+                    <input type="number" class="form-control" name="phone_no" id="phone" placeholder="Enter Phone No"
+                        required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <select id="work-status" name="work_status" class="form-control" required>
+                        <option value="">your work status...</option>
+                        <option value="fresher">I'm Fresher</option>
+                        <option value="experienced">I'm Experienced</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Register</button>
+            <p style="margin-top: 2vh;">Already have an account <a href="/login">Login here</a> </p>
+        </form>
+    </div>
+</div>
+
+<script src="/javascripts/alert.js"></script>

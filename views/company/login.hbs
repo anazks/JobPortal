@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+{{#if alertMessage}}
+<div class="myAlert-top alert alert-success">
+    <strong>{{alertMessage}}</strong>
+</div>
+{{/if}}
+<div class="container">
+    <div class="card img-container" style="padding: 0;">
+        <img class="cover-image" src="/images/login-cover.jpg" alt="" height="400" width="300">
+    </div>
+    <div class="card">
+        <h1>Login</h1>
+        <form action="/company/login" method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn submit-btn">Submit</button>
+            <p style="margin-top: 2vh;">Don't have an account <a href="/signup">register as client</a> </p>
+        </form>
+    </div>
+</div>
+<script src="/javascripts/alert.js"></script>

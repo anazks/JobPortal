@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<div class="container">
+    <div class="card">
+        <h1>Add New Job</h1>
+        <form action="/company/add-new-job" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="title" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter Title" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="description" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter Job description" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="vacancy" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="vacancy" required>
+            </div>
+            <div class="form-group">
+                <select name="job_type" id="" class="form-control" required>
+                    <option value=""> Type of Job</option>
+                    <option value="Part time">Part time</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Work from Home">Work from Home</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="experience" id="" class="form-control" required>
+                    <option value=""> Experience required</option>
+                    <option value="fresher">fresher</option>
+                    <option value="0-1 year">0-1 year</option>
+                    <option value="2 years">2 years</option>
+                    <option value="3 years">3 years</option>
+                    <option value="4 years">4 years</option>
+                    <option value="5 years and above">5 years or above</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="salary" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter salary in ₹ per year" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="area" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter area" required>
+            </div>
+            <input type="hidden" name="company_name" value="{{company.name}}">
+            <input type="hidden" name="company_id" value="{{company._id}}">
+            <button type="submit" class="btn submit-btn">Upload Job</button>
+        </form>
+    </div>
+</div>
