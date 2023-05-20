@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="card">
-        <h1>Add New Job</h1>
+        <h1>Add New Program</h1>
         <form action="/company/add-new-job" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="title" id="exampleInputEmail1"
@@ -10,20 +10,20 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="description" id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Enter Job description" required>
+                    aria-describedby="emailHelp" placeholder="Enter Program description" required>
             </div>
-            <div class="form-group">
+            {{!-- <div class="form-group">
                 <input type="number" class="form-control" name="vacancy" id="exampleInputEmail1"
                     aria-describedby="emailHelp" placeholder="vacancy" required>
-            </div>
-            <div class="form-group">
+            </div> --}}
+            {{!-- <div class="form-group">
                 <select name="job_type" id="" class="form-control" required>
                     <option value=""> Type of Job</option>
                     <option value="Part time">Part time</option>
                     <option value="Full Time">Full Time</option>
                     <option value="Work from Home">Work from Home</option>
                 </select>
-            </div>
+            </div> --}}
             <div class="form-group">
                 <select name="experience" id="" class="form-control" required>
                     <option value=""> Experience required</option>
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="salary" id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Enter salary in ₹ per year" required>
+                    aria-describedby="emailHelp" placeholder="Enter payment in ₹" required>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="area" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -45,7 +45,7 @@
             </div>
             <input type="hidden" name="company_name" value="{{company.name}}">
             <input type="hidden" name="company_id" value="{{company._id}}">
-            <button type="submit" class="btn submit-btn">Upload Job</button>
+            <button type="submit" class="btn submit-btn">Upload Program</button>
         </form>
     </div>
 </div>

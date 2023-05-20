@@ -185,9 +185,9 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#intro">Home</a></li>
-                    <li><a href="/user-jobs">Jobs</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#company">Companies</a></li>
+                    <li><a href="/user-jobs">Our Programs</a></li>
+                    {{!-- <li><a href="#about">About Us</a></li>
+                    <li><a href="#company">Companies</a></li> --}}
                     {{#if user}}
                     <li class="menu-has-children"><a href="#">{{user.name}}</a>
                         <ul>
@@ -200,11 +200,11 @@
                     {{else}}
                     <li><a href="/login">Login</a></li>
                     <li><a href="/signup">Signup</a></li>
-                    <li class="menu-has-children"><a href="#">For Employers</a>
+                    {{!-- <li class="menu-has-children"><a href="#">For Employers</a>
                         <ul>
                             <li><a href="/company/login"><button style="width:100%;">Login</button></a></li><br>
                             <li><a href="/company/signup"><button style="width:100%;">Sign Up</button></a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     {{/if}}
                     <li><a href="#contact">Contact</a></li>
@@ -533,6 +533,7 @@
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=JobPortal
         -->
                 Designed by Us
+                <a href="/company/signup"><button style="width:100%;">thank You!!</button></a>
             </div>
         </div>
     </footer><!-- #footer -->

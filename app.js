@@ -57,7 +57,7 @@ app.use(session({
 async function connect() {
   try {
     let url = process.env.MONGO_URI; //connectionn string from .env file
-    await connectDB("mongodb+srv://anazks:123@cluster0.jxpil.mongodb.net/?retryWrites=true&w=majority");
+    await connectDB("mongodb+srv://anazks:123@cluster0.jxpil.mongodb.net/betaPortal?retryWrites=true&w=majority");
     console.log("DB connected");
   } catch (error) {
     console.log(error);
