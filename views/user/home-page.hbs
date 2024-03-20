@@ -177,7 +177,7 @@
         <div class="container-fluid">
 
             <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">BETA PORTAL</a></h1>
+                <h1><a href="#intro" class="scrollto">JOB PORTAL</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="#intro"><img src="/images/logo.png" alt="" title="" /></a>-->
             </div>
@@ -185,9 +185,10 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#intro">Home</a></li>
-                    <li><a href="/user-jobs">Our Programs</a></li>
+                    <li><a href="/company">Companies</a></li>
+                    {{!-- <li><a href="/user-jobs">Our Programs</a></li> --}}
                     {{!-- <li><a href="#about">About Us</a></li>
-                    <li><a href="#company">Companies</a></li> --}}
+                    <li><a href="/company">Companies</a></li> --}}
                     {{#if user}}
                     <li class="menu-has-children"><a href="#">{{user.name}}</a>
                         <ul>
@@ -200,11 +201,11 @@
                     {{else}}
                     <li><a href="/login">Login</a></li>
                     <li><a href="/signup">Signup</a></li>
-                    {{!-- <li class="menu-has-children"><a href="#">For Employers</a>
+                    <li class="menu-has-children"><a href="#">For Employers</a>
                         <ul>
                             <li><a href="/company/login"><button style="width:100%;">Login</button></a></li><br>
                             <li><a href="/company/signup"><button style="width:100%;">Sign Up</button></a></li>
-                        </ul> --}}
+                        </ul>
                     </li>
                     {{/if}}
                     <li><a href="#contact">Contact</a></li>
